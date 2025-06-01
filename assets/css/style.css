@@ -53,7 +53,7 @@ html, body {
     text-decoration: none;
    }
 .header-area .main-nav .nav{
-    float: right;
+   float: right;
     margin-top: 27px;
     margin-right: 0px;
     background-color: transparent;
@@ -72,7 +72,7 @@ letter-spacing: 1px;
 text-decoration: none;
 }
 .header-area .main-nav .nav li button #btn{
-    display: block;
+   
     padding: 15px 17px;
 }
 .header-area .main-nav .nav li:hover a,
@@ -241,10 +241,6 @@ letter-spacing: 0.25px;
   margin-top: 10px;
   }
 
-body {
-  overflow-x: hidden;
-}
-
 #classes h1 {
   text-align: center;
   margin-top: 50px;
@@ -260,6 +256,13 @@ body {
 #classes p {
   text-align: center;
   margin-top: 20px;
+}
+.tab-item {
+  display: none;
+}
+
+.tab-item.active {
+  display: block;
 }
 
 #tabs ul li {
@@ -316,112 +319,137 @@ body {
 .tabs-content button {
   margin-bottom: 20px;
 }
+
+/* Schedule Section */
 #schedule {
   position: relative;
-  padding: 60px 0;
+  background: url('../img/schedule.jpg') no-repeat center center/cover;
+  padding: 80px 0;
+  color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  margin-top:100px;
 }
-
 #schedule::before {
-  content: "";
+  content: '';
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
-  background-image: url(../img/schedule.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: -1;
 }
-
-#schedule .heading-schedule h1 {
-  font-weight: 500;
-  font-size: 30px;
+.schedule-heading h1 {
+  font-size: 36px;
+  font-weight: 600;
   color: #fff;
 }
 
-#schedule .heading-schedule h1 strong {
+.schedule-heading h1 strong {
   color: #ed563b;
 }
 
-#schedule .heading-schedule p {
-  color: #fff;
-  font-size: 15px;
-  margin-top: 18px;
+.schedule-heading img {
+  margin: 15px auto;
 }
 
-.days-content .filtered {
-  margin: 0;
+.schedule-heading p {
+  font-size: 16px;
+  margin-top: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.days-filter ul {
+  list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  margin: 30px 0;
 }
 
-.days-content .filtered li {
- margin: 0;
-  color: #fff;
+.days-filter ul li {
+  display: inline-block;
+  margin: 0 10px;
   cursor: pointer;
-}
-
-.days-content .filtered li.active {
-  color: #ed563b;
-  font-weight: bold;
-}
-
-#schedule .days-content .filtered li:not(:last-child)::after {
-  content: "/";
+  font-weight: 500;
   color: #fff;
-  margin-left: 2px;
 }
 
-.table {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-.table th,
-.table td {
-  border: 1px solid #fff;
-}
-
-.filtered li.active {
+.days-filter ul li.active {
   color: #ed563b;
+  border-bottom: 2px solid #ed563b;
+  padding-bottom: 4px;
 }
+
+/* Table Styling */
+.schedule-table {
+  width: 100%;
+  border: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.schedule-table thead th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+@media (max-width: 768px) {
+  .schedule-heading h1 {
+    font-size: 28px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .days-filter ul li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
 
 
 #trainers{
-  margin-top:213px;
+  margin-top:100px;
 }
 .head-trainers strong{
   color: #ed563b;
 
 }
-.head-trainers h1{
+.head-trainers h2{
   font-weight: 700;
 }
-.head-trainers p{
-  padding:20px;
-  margin-bottom:50px;
+
+#trainers .card {
+  max-width: 350px;
+  margin: 20px auto;
 }
 
-.head-trainers{
-  padding:10px;
-  text-align: center;
-}
-
-.social-icons li{
-  text-decoration: none;
-  list-style: none;
-  display:inline-block;
-  padding: 5px;
-
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
 }
 #contact-us{
   margin-top: 100px;
 }
-.map iframe {
+ iframe {
   width: 100%;
   height: 100%;
   display: block;
@@ -432,34 +460,37 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
+  width: 100%;
   padding: 60px 20px;
-  height: 100%;
-  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#contact-us .form-group {
+
+/* The form container itself */
+.form-box {
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px;
-  border-radius: 8px;
+  padding: 40px;
+  border-radius: 10px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form label {
-  text-transform: capitalize;
-  font-weight: 500;
+.form-box label {
+  font-weight: 600;
   margin-top: 10px;
   display: block;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-box input,
+.form-box textarea {
   margin-top: 5px;
   margin-bottom: 15px;
 }
+
+
 footer{
   background-color: #232d39;
   color: #fff;
@@ -472,6 +503,11 @@ footer i{
   display: inline;
   padding: 2px 3px;
  }
+@media (max-width: 768px) {
+  .form-box {
+    max-width: 100%;
+  }
+}
 
 @media(max-width:1754px){
   #trainers{
@@ -521,6 +557,10 @@ align-items: center;
   }
   .feature-item .right-content h2.head{
     font-size:15px;
+  }
+  .head-trainers {
+    margin-right: 0; 
+    padding: 0 10px;  
   }
 
 .content h1{
@@ -698,19 +738,19 @@ th,td{
   #tabs button{
     margin-bottom: 20px !important;
   }
+   .tabs-content {
+    margin-left: 0 !important;
+  }
 }
-@media (max-width:2632px) {
+ @media (max-width:2632px) { 
   tbody tr td.show {
     visibility: visible !important;
   }
-  .table th,
-  .table td {
-    white-space: nowrap;
-  }
-}
+ }
+
 @media(max-width:1988px){
   #trainers{
-  margin-top:940px;
+  margin-top:100px;
   }
 }
 @media (max-width: 768px) {
@@ -719,5 +759,10 @@ th,td{
   }
   .contact-form {
     padding:20px;
+  }
+}
+@media(max-width:756px){
+  .head-trainers h2{
+   margin-left: 50px;
   }
 }
