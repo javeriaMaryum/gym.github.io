@@ -38,7 +38,7 @@
 
 <!-- body part start -->
  <div class="main-banner" >
-                    <video autoplay muted loop id="bg-video">
+                    <video autoplay muted playsinline loop id="bg-video">
                         <source src="assets/img/gym-video.mp4" type="video/mp4" />
                     </video>
                     <div class="video-overlay header-text">
@@ -167,230 +167,130 @@
 <!-- call-to-action end -->
 
 <!-- our classes start -->
-<section id="classes">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-12">
-        <h1><strong>Our</strong> Classes</h1>
-        <img src="assets/img/line-dec.png" alt="waves" class="img-fluid d-block mx-auto">
-        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra<br> ipsum dolor, ultricies fermentum massa consequat eu.</p>
-      </div>
-    </div>
-
-    <div class="row mt-5" id="tabs">
-      <div class="col-md-4 col-12">
-        <ul class="list-unstyled">
-          <li><a href="#tab1"><img src="assets/img/icon.png" alt="">First Training Class</a></li>
-          <li><a href="#tab2"><img src="assets/img/icon.png" alt="">Second Training Class</a></li>
-          <li><a href="#tab3"><img src="assets/img/icon.png" alt="">Third Training Class</a></li>
-          <li><a href="#tab4"><img src="assets/img/icon.png" alt="">Fourth Training Class</a></li>
-        </ul>
-       <button class="btn btn-danger w-100 mt-3">
-  <a href="#" class="btn btn-danger w-100 mt-3 text-white text-decoration-none">View All Schedules</a>
-
-</button>
-
-
-      </div>
-
-      <div class="col-md-8 col-12">
-        <section class="tabs-content">
-  <article id="tab1" class="tab-item active">
-    <img src="assets/img/training.jpg">
-    <h4>First Training Class</h4>
-    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan</p>
-    <button class="btn btn-danger btn-lg">View Schedules</button>
-  </article>
-  
-  <article id="tab2" class="tab-item">
-    <img src="assets/img/training1.jpg">
-    <h4>Second Training Class</h4>
-    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan</p>
-    <button class="btn btn-danger btn-lg">View Schedules</button>
-  </article>
-  
-  <article id="tab3" class="tab-item">
-    <img src="assets/img/training2.jpg">
-    <h4>Third Training Class</h4>
-    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan</p>
-    <button class="btn btn-danger btn-lg">View Schedules</button>
-  </article>
-  
-  <article id="tab4" class="tab-item">
-    <img src="assets/img/training3.jpg">
-    <h4>Fourth Training Class</h4>
-    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan</p>
-    <button class="btn btn-danger btn-lg">View Schedules</button>
-  </article>
-</section>
-
-
-<!-- schedule? -->
-
 <section id="schedule">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-8 offset-md-2">
-        <div class="heading-schedule dark-bg text-center text-white">
-          <h1>Classes <strong>Schedule</strong></h1>
-          <img src="assets/img/line-dec.png" alt="">
-          <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-        </div>
-      </div>
+    <div class="schedule-heading text-center">
+      <h1>Classes <strong>Schedule</strong></h1>
+      <img src="assets/img/line-dec.png" alt="Line Decoration" class="img-fluid">
+      <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor.</p>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10">
-        <div class="days-content text-center mb-4">
-          <ul class="filtered p-0">
-            <li class="active">Monday</li>
-            <li>Tuesday</li>
-            <li>Wednesday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
-          </ul>
-        </div>
+    <div class="days-filter text-center">
+      <ul>
+        <li class="active">Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+      </ul>
+    </div>
 
-        <!-- Make this div responsive -->
-        <div class="table-responsive">
-          <table class="table text-white text-center border">
-            <thead>
-              <tr>
-                <th>Classes</th>
-                <th colspan="2">Timings</th>
-                <th>Trainers</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Fitness Class</td>
-                <td>9:00pm-11:00pm</td>
-                <td>9:00pm-11:00pm</td>
-                <td>Alexa Z</td>
-              </tr>
-              <tr>
-                <td>New GYM Training</td>
-                <td>2:00pm-4:00pm</td>
-                <td>2:00pm-4:00pm</td>
-                <td>Jennie</td>
-              </tr>
-              <tr>
-                <td>Body Building</td>
-                <td>9:00am-11:00am</td>
-                <td>9:00am-11:00am</td>
-                <td>Howard</td>
-              </tr>
-              <tr>
-                <td>Basic Muscle</td>
-                <td>6:00pm-8:00pm</td>
-                <td>6:00pm-8:00pm</td>
-                <td>John</td>
-              </tr>
-              <tr>
-                <td>Advanced Muscle</td>
-                <td>8:30pm-10:00pm</td>
-                <td>8:30pm-10:00pm</td>
-                <td>George</td>
-              </tr>
-              <tr>
-                <td>Yoga Training</td>
-                <td>7:00am-8:00am</td>
-                <td>7:00am-8:00am</td>
-                <td>William</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-      </div>
+    <div class="table-responsive">
+      <table class="table schedule-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Time</th>
+            <th>Trainer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fitness Training</td>
+            <td>9:00am - 11:00am</td>
+            <td>Alexa Z</td>
+          </tr>
+          <tr>
+            <td>Gym Training</td>
+            <td>2:00pm - 4:00pm</td>
+            <td>Jennie</td>
+          </tr>
+          <tr>
+            <td>Body Building</td>
+            <td>5:00pm - 7:00pm</td>
+            <td>Howard</td>
+          </tr>
+          <tr>
+            <td>Yoga Class</td>
+            <td>7:00am - 8:00am</td>
+            <td>William</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
+
 
 
 <!-- schedule part end -->
 
 <!-- trainers part start -->
 
-<section id="trainers">
-     <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-3">
-            <div class="head-trainers">
-               <h1>Expert <strong>Trainers</strong></h1>
-               <img src="assets/img/line-dec.png">
-              <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-           </div>
-     </div>
+<section id="trainers" class="py-5 bg-light">
+  <div class="container">
+    <div class="head-trainers">
+    <h2 class="text-center mb-5">Our <strong>Trainers</strong></h2>
     </div>
-<div class="row">
-    <div class="col-4">
-      <div class="card">
-        <img src="assets/img/trainer1.jpg" class="card-img-top" alt="">
-        <div class="card-body">
-          <span>Strength Trainer</span>
-          <h4>John</h4>
-          <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-          <ul class="social-icons">
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-          </ul>
+    <div class="row justify-content-center">
+      
+      <!-- Trainer 1 -->
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 text-center">
+          <img src="assets/img/trainer1.jpg" class="card-img-top" alt="Trainer 1">
+          <div class="card-body">
+            <h5 class="card-title">Trainer Name 1</h5>
+            <p class="card-text">Specialist in Weight Training</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <img src="assets/img/trainer2.jpg" class="card-img-top" alt="">
-        <div class="card-body">
-          <span>Strength Trainer</span>
-          <h4>John</h4>
-          <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-          <ul class="social-icons">
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-          </ul>
+
+      <!-- Trainer 2 -->
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 text-center">
+          <img src="assets/img/trainer2.jpg" class="card-img-top" alt="Trainer 2">
+          <div class="card-body">
+            <h5 class="card-title">Trainer Name 2</h5>
+            <p class="card-text">Yoga & Wellness Coach</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <img src="assets/img/trainer3.jpg" class="card-img-top" alt="">
-        <div class="card-body">
-          <span>Strength Trainer</span>
-          <h4>John</h4>
-          <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-          <ul class="social-icons">
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-          </ul>
+
+      <!-- Trainer 3 -->
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 text-center">
+          <img src="assets/img/trainer3.jpg" class="card-img-top" alt="Trainer 3">
+          <div class="card-body">
+            <h5 class="card-title">Trainer Name 3</h5>
+            <p class="card-text">HIIT & Functional Training</p>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
-</div>
 </section>
+
 
 <!-- contact us -->
 
 <section id="contact-us">
   <div class="container-fluid">
     <div class="row no-gutters">
-      <div class="col-md-6 col-12">
-        <div class="map embed-responsive embed-responsive-1by1">
+      <!-- MAP COLUMN -->
+      <div class="col-lg-5 col-md-6 col-12 p-0">
+        <div class="map embed-responsive embed-responsive-1by1 h-100">
           <iframe class="embed-responsive-item"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28946.203424966454!2d66.99088821083984!3d24.922685400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f93927ff981%3A0xfbdc12828045fd64!2s24%20Hours%20Fitness%20Gym!5e0!3m2!1sen!2s!4v1737392781053!5m2!1sen!2s"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18..."
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-      <div class="col-md-6 col-12">
-        <div class="contact-form">
-          <form action="" method="post" id="contact">
+
+      <!-- FORM COLUMN -->
+      <div class="col-lg-7 col-md-6 col-12 p-0">
+        <div class="contact-form d-flex justify-content-center align-items-center">
+          <form id="contact" class="form-box">
             <div class="form-group">
               <label>Username</label>
               <input type="text" class="form-control" placeholder="Username">
@@ -408,6 +308,8 @@
     </div>
   </div>
 </section>
+
+
 
 
  <footer>
@@ -441,5 +343,34 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('#tabs a');
+    const tabItems = document.querySelectorAll('.tab-item');
+
+    // Show only the first tab initially
+    tabItems.forEach((item, index) => {
+      item.classList.toggle('active', index === 0);
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('data-target') || this.getAttribute('href').replace('#', '');
+
+        // Remove active from all tab items
+        tabItems.forEach(item => item.classList.remove('active'));
+
+        // Add active to selected one
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
   </body>
 </html>
